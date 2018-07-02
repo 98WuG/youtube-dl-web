@@ -6,6 +6,7 @@ Current status: Working
 
 To-do:
 * Catch unsupported URLs
-* Rudimentary loading status
+* ~~Rudimentary loading status~~ Done
 * Live loading status
 * Auto-setup (cronjob, facl's)
+* User customization options

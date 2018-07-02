@@ -11,4 +11,4 @@ setfacl -m u:apache:rwx "$DIR/$DOWNLOAD_FOLDER" >> $DIR/$LOG
 OUTPUT="$(youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' -o "$DIR/$DOWNLOAD_URL" "$@")"
 echo "$OUTPUT" >> $DIR/$LOG
 
-echo "<br><a href=\"./$DOWNLOAD_URL\" download>Download</a>"
+echo "<a href=\"./$DOWNLOAD_URL\" download>Your download is ready! Click here to download.</a>"

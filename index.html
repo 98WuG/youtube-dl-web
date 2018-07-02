@@ -61,17 +61,7 @@
 		<!-- MDB core JavaScript -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
 
-		<script type="text/javascript">
-		function download() {
-			$.ajax({
-					url: "download.php",
-					type: "post",
-					data: { "url" : $("#url").val() },
-					success: function(response) {
-						$("#return").html(response);
-					},
-				});
-		}
+		<script type="text/javascript" src="./download.js">
 		</script>
 
 	</body>
