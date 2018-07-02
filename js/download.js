@@ -1,5 +1,5 @@
 function download() {
-	$("#return").text("Loading...");
+	$("#return").text("Processing... (this may take a while)");
 	$.ajax({
 			url: "backend/download.php",
 			type: "post",
