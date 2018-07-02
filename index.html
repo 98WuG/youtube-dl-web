@@ -54,8 +54,8 @@
 			</div>
 		</div>
 
-		<div class="modal fade right" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+		<div class="modal fade bottom" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-full-height modal-bottom modal-notify modal-info" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<p class="heading lead">About</p>
@@ -67,7 +67,7 @@
 						<p class="h5 mt-1">A simple, responsive YouTube video downloading client</p>
 						<p class="mt-1">Made by Gerald Wu, powered by <code>youtube-dl</code>.</p>
 
-						<a data-toggle="collapse" href="#other" aria-expanded="false" aria-controls="how">
+						<a class="toggleDiv" data-toggle="collapse" href="#other" aria-expanded="false" aria-controls="how">
 							Can I download videos besides YouTube videos?
 						</a>
 						<div class="collapse" id="other">
@@ -78,7 +78,7 @@
 
 						<p class="mt-2"></p>
 
-						<a data-toggle="collapse" href="#how" aria-expanded="false" aria-controls="how">
+						<a class="toggleDiv" data-toggle="collapse" href="#how" aria-expanded="false" aria-controls="how">
 							How does this work?
 						</a>
 						<div class="collapse" id="how">
@@ -89,7 +89,7 @@
 
 						<p class="mt-2"></p>
 
-						<a data-toggle="collapse" href="#reallyhow" aria-expanded="false" aria-controls="how">
+						<a class="toggleDiv" data-toggle="collapse" href="#reallyhow" aria-expanded="false" aria-controls="how">
 							No really, <b><i>how does this work?</i></b>
 						</a>
 						<div class="collapse" id="reallyhow">
@@ -102,7 +102,7 @@
 
 						<p class="mt-2"></p>
 
-						<a data-toggle="collapse" href="#shell" aria-expanded="false" aria-controls="how">
+						<a class="toggleDiv" data-toggle="collapse" href="#shell" aria-expanded="false" aria-controls="how">
 							Why in the <b>[expletive]</b> did you use a shell script instead of Python?
 						</a>
 						<div class="collapse" id="shell">
@@ -114,7 +114,7 @@
 
 						<p class="mt-2"></p>
 
-						<a data-toggle="collapse" href="#why" aria-expanded="false" aria-controls="how">
+						<a class="toggleDiv" data-toggle="collapse" href="#why" aria-expanded="false" aria-controls="how">
 							Why did you make this?
 						</a>
 						<div class="collapse" id="why">
@@ -126,7 +126,7 @@
 
 						<p class="mt-2"></p>
 
-						<a data-toggle="collapse" href="#but" aria-expanded="false" aria-controls="how">
+						<a class="toggleDiv" data-toggle="collapse" href="#but" aria-expanded="false" aria-controls="how">
 							But don't similar services already exist?
 						</a>
 						<div class="collapse" id="but">
@@ -137,7 +137,7 @@
 
 						<p class="mt-2"></p>
 
-						<a data-toggle="collapse" href="#DOS" aria-expanded="false" aria-controls="how">
+						<a class="toggleDiv" data-toggle="collapse" href="#DOS" aria-expanded="false" aria-controls="how">
 							I can DOS your site.
 						</a>
 						<div class="collapse" id="DOS">
@@ -166,6 +166,12 @@
 		</script>
 
 		<script type="text/javascript">
+			$(".toggleDiv").click(function(event){
+				var addressID = $(this).attr("href");
+				$(".collapse").not(addressID).collapse('hide');
+				$(addressID).collapse('toggle');
+				$('#aboutModal').data('bs.modal').handleUpdate();
+			});
 		</script>
 
 	</body>
