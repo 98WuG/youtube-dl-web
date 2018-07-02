@@ -24,23 +24,28 @@
 		<div class="container">
 			<div class="row">
 				<div class="col col-lg-12 text-center mt-4">
-							<form id="youtube-dl"
-								method="POST"
-								action="javascript:download()">
-								<p class="h1 card-title text-center py-4">YouTube Downloader</p>
-								<div class="form-row text-center">
-									<div class="col-lg-12">
-										<div class="md-form">
-											<input type="text" class="form-control" name="url" id="url" required />
-											<label for="url" class="font-weight-light">URL</label>
-										</div>
-									</div>
+					<form id="youtube-dl"
+						method="POST"
+						action="javascript:download()">
+						<p class="h1 card-title text-center py-4">YouTube Downloader</p>
+						<div class="form-row text-center">
+							<div class="col-lg-12">
+								<div class="md-form">
+									<input type="text" class="form-control" name="url" id="url" required />
+									<label for="url" class="font-weight-light">URL</label>
 								</div>
-								<div class="form-row text-center">
-									<div class="col-lg-4 mx-auto">
-										<button type="submit" class="btn btn-primary" value="Download">Download</button>
-									</div>
-								</div>
+							</div>
+						</div>
+						<div class="form-row text-center">
+							<div class="col-lg-4 mx-auto">
+								<button type="submit" class="btn btn-primary" value="Download">Download</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-lg-12">
+						<p class="h4" id="return"></p>
 					</div>
 				</div>
 			</div>
@@ -63,7 +68,7 @@
 					type: "post",
 					data: { "url" : $("#url").val() },
 					success: function(response) {
-						$("#url").val(response);
+						$("#return").html(response);
 					},
 				});
 		}
