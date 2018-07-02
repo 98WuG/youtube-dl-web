@@ -1,0 +1,73 @@
+<html lang="en">
+	<head>
+
+		<!-- Useless boilerplate garbage -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Material Design Bootstrap -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
+
+		<!-- Cerebral CSS -->
+		<link rel="stylesheet" href="style.css">
+
+		<title>YouTube Downloader</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col col-lg-12 text-center mt-4">
+							<form id="youtube-dl"
+								method="POST"
+								action="javascript:download()">
+								<p class="h1 card-title text-center py-4">YouTube Downloader</p>
+								<div class="form-row text-center">
+									<div class="col-lg-12">
+										<div class="md-form">
+											<input type="text" class="form-control" name="url" id="url" required />
+											<label for="url" class="font-weight-light">URL</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-row text-center">
+									<div class="col-lg-4 mx-auto">
+										<button type="submit" class="btn btn-primary" value="Download">Download</button>
+									</div>
+								</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- SCRIPTS -->
+		<!-- JQuery -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+
+		<script type="text/javascript">
+		function download() {
+			$.ajax({
+					url: "download.php",
+					type: "post",
+					data: { "url" : $("#url").val() },
+					success: function(response) {
+						$("#url").val(response);
+					},
+				});
+		}
+		</script>
+
+	</body>
+</html>

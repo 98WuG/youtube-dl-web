@@ -1,0 +1,12 @@
+.vertical-center {
+	min-height: 100%;
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column wrap;
+	//word-wrap: break-word;
+	//word-break: break-all;
+}
+
