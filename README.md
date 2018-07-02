@@ -10,3 +10,4 @@ To-do:
 * Live loading status
 * Auto-setup (cronjob, facl's)
 * User customization options
+* CAPTCHA

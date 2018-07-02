@@ -1,7 +1,7 @@
 function download() {
 	$("#return").text("Loading...");
 	$.ajax({
-			url: "download.php",
+			url: "backend/download.php",
 			type: "post",
 			data: { "url" : $("#url").val() },
 			success: function(response) {
