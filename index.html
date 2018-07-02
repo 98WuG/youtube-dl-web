@@ -34,16 +34,17 @@
 						action="javascript:download()">
 						<p class="h1 text-center py-4"><i class="fa fa-youtube-play mr-2"></i>YouTube Downloader</p>
 						<div class="form-row">
-							<div class="col-lg-9">
+							<div class="col-lg-12">
 								<div class="md-form">
 									<i class="fa fa-link prefix grey-text mt-2"></i>
 									<input type="text" class="form-control" name="url" id="url" required />
 									<label for="url" class="font-weight-light">URL</label>
 								</div>
 							</div>
-							<div class="col-lg-3 text-center">
-								<button type="submit" class="btn btn-primary" value="Download" id="download">Download <i class="fa fa-cloud-download ml-2"></i></button>
-								<a href="#aboutModal" data-toggle="modal" ><i class="fa fa-question-circle" style="font-size:20px"></i></a>
+							<div class="col-lg-5 mx-auto text-center">
+								<button type="submit" class="btn btn-primary" value="Download" id="download">Download<i class="fa fa-cloud-download ml-2"></i></button>
+								<!-- <a href="#aboutModal" data-toggle="modal" ><i class="fa fa-question-circle" style="font-size:20px"></i></a> -->
+								<button type="button" class="btn btn-info" data-target="#aboutModal" data-toggle="modal" >About<i class="fa fa-info-circle ml-2" style="font-size:20px"></i></button>
 							</div>
 						</div>
 					</div>
