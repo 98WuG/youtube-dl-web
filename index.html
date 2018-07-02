@@ -90,11 +90,11 @@
 						<p class="mt-2"></p>
 
 						<a class="toggleDiv" data-toggle="collapse" href="#reallyhow" aria-expanded="false" aria-controls="how">
-							No really, <b><i>how does this work?</i></b>
+							No, really, <b><i>how does this work?</i></b>
 						</a>
 						<div class="collapse" id="reallyhow">
 							<div class="mt-3">
-								When you hit download, the page sends an AJAX request to a server-side php file, along with the URL you entered. This URL is passed on to a shell script that runs server side to cache the video using the <code>youtube-dl</code> program.<br>
+								When you hit download, the page sends an AJAX request to a server-side <code>.php</code> file, along with the URL you entered. This URL is passed on to a shell script that runs server side to cache the video using the <code>youtube-dl</code> program.<br>
 								After it's cached, the URL is passed back to client for you to download. The file remains cached until midnight, when a cronjob clears the cache folder.<br>
 								If you want to delve into the code yourself, the source code is available on GitHub <a href="https://github.com/98WuG/youtube-dl-web">here</a>. Or, you can close this box and click the GitHub triangle in the upper right-hand corner.
 							</div>
@@ -165,13 +165,7 @@
 		<script type="text/javascript" src="./js/download.js">
 		</script>
 
-		<script type="text/javascript">
-			$(".toggleDiv").click(function(event){
-				var addressID = $(this).attr("href");
-				$(".collapse").not(addressID).collapse('hide');
-				$(addressID).collapse('toggle');
-				$('#aboutModal').data('bs.modal').handleUpdate();
-			});
+		<script type="text/javascript" src="./js/collapse.js">
 		</script>
 
 	</body>
